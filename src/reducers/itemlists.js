@@ -12,7 +12,7 @@ const initialState = (() => {
       imgId: 0,
       productName: "Orren Ellis" + "----" + i,
       price: String(Math.floor(Math.random() * Math.floor(10000))),
-      rating: String(Math.floor(Math.random() * Math.floor(6))),
+      rating: String(Math.random() * Math.floor(6)),
       liked: Math.floor(Math.random() * Math.floor(2)) === 1
     };
     arr.push(obj)
