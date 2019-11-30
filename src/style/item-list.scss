@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.item-list {
+  .item {
+    display: inline-block;
+    @media screen and (max-width: 1023px) {
+      width: calc((100% / 3) - 10px);
+      &:not(:nth-child(3n)) {
+        margin-right: 10px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      width: calc((100% / 2) - 10px);
+      &:not(:nth-child(2n)) {
+        margin-right: 10px;
+      }
+    }
+    width: calc((100% / 4) - 10px);
+    &:not(:nth-child(4n)) {
+      margin-right: 10px;
+    }
+
+    &-detail {
+      border: 1px solid #deb887;
+      border-radius: 30px;
+      list-style: none;
+      display: inline-block;
+
+      ul {
+        list-style: none;
+        border-radius: 10px;
+
+        li {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      &-img {
+        position: relative;
+        img {
+          display: block;
+          padding: 5%;
+          width: 90%;
+          object-fit: cover;
+        }
+        &-dicount {
+          position: absolute;
+          top: 40px;
+          right: 40px;
+          color: #bbb;
+        }
+        .left {
+          background-color: transparent;
+          position: absolute;
+          top: 150px;
+          left: 0;
+          .material-icons {
+            font-size: 100px;
+            color: white;
+          }
+          opacity: 0;
+          border: none;
+        }
+        &:hover .left {
+          opacity: 1;
+        }
+
+        .right {
+          background-color: transparent;
+          position: absolute;
+          top: 150px;
+          right: 0;
+          .material-icons {
+            font-size: 100px;
+            color: white;
+          }
+          opacity: 0;
+          border: none;
+        }
+        &:hover .right {
+          opacity: 1;
+        }
+      }
+
+      &-name {
+        padding: 10px 10%;
+        font-size: 20px;
+      }
+      &-price {
+        padding: 10px 10%;
+        font-weight: 700;
+        font-style: italic;
+        text-align: left;
+      }
+      &-rating {
+        .material-icons {
+          font-size: 24px;
+          color: #ffd700;
+        }
+        text-align: left;
+        padding: 10px 10%;
+      }
+      &-like {
+        text-align: left;
+        padding: 10px 80%;
+        height: 50px;
+        .material-icons:hover {
+          color: #777;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
